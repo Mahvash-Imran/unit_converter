@@ -3,6 +3,7 @@ Our unit converter project offers a user-friendly interface for accurate bidirec
 Catering to the needs of students, professionals in engineering, architecture, science, finance, as well as educators and the general public,
 it provides a convenient tool for seamless conversion across different disciplines.
 
+// converting the CGS units into subunits//
 
 #include<iostream>
 using namespace std;
