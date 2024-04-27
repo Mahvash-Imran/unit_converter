@@ -26,3 +26,18 @@ namespace CGS{
      T yard_to_cm(){return value*91.44;}
         T cm_to_yard(){return value/91.44;} 
     };
+    // derived class of conver_cm class to access the member of base class//
+    // add template to take any type of data type//
+     template <class T>
+   template <class T>
+    class convert_gram : public convert_cm<T> {
+    public:
+        convert_gram(T value) : convert_cm<T>(value) {}
+
+        T pound_to_gram() { return value * 453.6; } // make functions for conversions//
+        T gram_to_pound() { return value / 453.6; }
+        T ton_to_gram() { return value * 907200; }
+        T gram_to_ton() { return value / 907200; }
+        T stone_to_gram() { return value * 6350; }
+        T gram_to_stone() { return value / 6350; }
+    };
