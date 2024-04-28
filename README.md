@@ -41,3 +41,58 @@ namespace CGS{
         T stone_to_gram() { return value * 6350; }
         T gram_to_stone() { return value / 6350; }
     };
+
+
+//SI SYSTEM
+#include<iostream>
+#include<cmath>
+#include<string>
+using namespace std;
+
+namespace Length_converter{
+
+    class unitconverter{
+        public:
+        virtual double convert(double value,int exponent) const = 0;
+    };
+
+    class prefixToMeter: public unitconverter{
+        public:
+        prefixToMeter() {};
+        double convert(double value, int exponent) const override {
+            return value*pow(10,exponent);
+        }
+
+    };
+
+    class MeterToPrefix: public unitconverter{
+        public:
+        MeterToPrefix(){};
+        double convert(double meter, int exponent) const override {
+            return meter/pow(10,exponent);
+        }
+
+    };
+}
+
+namespace Mass_converter{
+
+    class unitconverter{
+        public:
+        virtual double convert(double value,int exponent) const = 0;
+    };
+
+    class prefixToKilograms: public unitconverter{
+        double convert(double value, int exponent) const override {
+            return value*pow(10,exponent);
+        }
+
+    };
+
+    class KilogramsToPrefix: public unitconverter{
+        double convert(double kg, int exponent) const override {
+            return kg/pow(10,exponent);
+        }
+
+    };
+}
