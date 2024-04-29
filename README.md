@@ -26,7 +26,7 @@ namespace CGS{
      T yard_to_cm(){return value*91.44;}
         T cm_to_yard(){return value/91.44;} 
     };
-    // derived class of conver_cm class to access the member of base class//
+    // derived class of converT_cm class to access the member of base class//
     // add template to take any type of data type//
      template <class T>
    template <class T>
@@ -41,6 +41,27 @@ namespace CGS{
         T stone_to_gram() { return value * 6350; }
         T gram_to_stone() { return value / 6350; }
     };
+    // DERIVED CLSS TO CONVERT_SECONDS INTO SUBUNITS//
+    // add  template//
+    template <class T>
+    class convert_time : public convert_cm<T> {
+    public:
+        convert_time(T value) : convert_cm<T>(value) {}
+
+        T min_to_sec() { return value * 60; }
+        T sec_to_min() { return value / 60; }      // 12 functions for conversions//
+        T hr_to_sec() { return value * 3600; }
+        T sec_to_hr() { return value / 3600; }
+        T day_to_sec() { return value * 86400; }
+        T sec_to_day() { return value / 86400; }
+        T week_to_sec() { return value * 604800; }
+        T sec_to_week() { return value / 604800; }
+        T month_to_sec() { return value * 2629800; }
+        T sec_to_month() { return value / 2629800; }
+        T year_to_sec() { return value * 31557600; }
+        T sec_to_year() { return value / 31557600; }
+    };
+}
 
 
 //SI SYSTEM
