@@ -117,3 +117,84 @@ namespace Mass_converter{
 
     };
 }
+
+namespace Time_converter{
+
+    class unitconverter{
+        public:
+        virtual double convert(double value,int exponent) const = 0;
+    };
+
+    class prefixTosecond: public unitconverter{
+        public:
+        double convert(double value, int exponent) const override {
+            return value*pow(10,exponent);
+        }
+
+    };
+
+    class secondToPrefix: public unitconverter{
+        public:
+        double convert(double sec, int exponent) const override {
+            return sec/pow(10,exponent);
+        }
+
+    };
+}
+
+namespace Temperature_converter{
+
+    class unitconverter{
+        public:
+        virtual double convert(double value) const = 0;
+    };
+
+    class CelsiusToKelvin: public unitconverter{
+        public:
+        double convert(double c) const override {
+            return c+273.15;
+        }
+
+    };
+
+    class KelvinToCelsius: public unitconverter{
+        public:
+        double convert(double k) const override {
+            return k-273.15;
+        }
+
+    };
+
+    class FahrenheitToKelvin: public unitconverter{
+        public:
+        double convert(double f) const override {
+            return (f-32)*(5/9)+273.15;
+        }
+
+    };
+
+    class KelvinToFahrenheit: public unitconverter{
+        public:
+        double convert(double k) const override {
+            return (k-273.15)*(9/5)+32;
+        }
+
+    };
+
+    class CelsiusToFahrenheit: public unitconverter{
+        public:
+        double convert(double c) const override {
+            return c*(9/5)+32;
+        }
+
+    };
+
+    class FahrenheitToCelsius: public unitconverter{
+        public:
+        double convert(double f) const override {
+            return (f-32)*(5/9);
+        }
+
+    };
+
+}
