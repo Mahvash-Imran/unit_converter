@@ -198,3 +198,27 @@ namespace Temperature_converter{
     };
 
 }
+
+namespace ElectricCurrent_converter{
+
+    class unitconverter{
+        public:
+        virtual double convert(double value,int exponent) const = 0;
+    };
+
+    class prefixToAmpere: public unitconverter{
+        public:
+        double convert(double value, int exponent) const override {
+            return value*pow(10,exponent);
+        }
+
+    };
+
+    class AmpereToPrefix: public unitconverter{
+        public:
+        double convert(double Ampere, int exponent) const override {
+            return Ampere/pow(10,exponent);
+        }
+
+    };
+}
