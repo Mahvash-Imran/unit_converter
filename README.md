@@ -222,3 +222,27 @@ namespace ElectricCurrent_converter{
 
     };
 }
+
+namespace AmountofSubstance_converter{
+
+    class unitconverter{
+        public:
+        virtual double convert(double value,int exponent) const = 0;
+    };
+
+    class prefixTomol: public unitconverter{
+        public:
+        double convert(double value, int exponent) const override {
+            return value*pow(10,exponent);
+        }
+
+    };
+
+    class molToPrefix: public unitconverter{
+        public:
+        double convert(double mol, int exponent) const override {
+            return mol/pow(10,exponent);
+        }
+
+    };
+}
