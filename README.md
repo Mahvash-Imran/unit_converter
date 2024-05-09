@@ -246,3 +246,27 @@ namespace AmountofSubstance_converter{
 
     };
 }
+
+namespace LuminousIntensity_converter{
+
+    class unitconverter{
+        public:
+        virtual double convert(double value,int angle) const = 0;
+    };
+
+    class LumenToCandela: public unitconverter{
+        public:
+        double convert(double l, int angle) const override {
+            return l*angle;
+        }
+
+    };
+
+    class CandelaToLumen: public unitconverter{
+        public:
+        double convert(double cd, int angle) const override {
+            return cd/angle;
+        }
+
+    };
+}
