@@ -62,6 +62,61 @@ namespace CGS{
         T sec_to_year() { return value / 31557600; }
     };
 }
+using namespace CGS;
+int main() {
+    int choice;
+    double value;
+
+    cout << "Choose conversion type:\n";
+    cout << "1. Length\n";
+    cout << "2. Mass\n";
+    cout << "3. Time\n";
+    cout << "Enter your choice: ";
+    cin >> choice;
+
+    switch (choice) {
+        case 1: {
+            int lengthChoice;
+            cout << "Choose length conversion:\n";
+            cout << "1. Inches to Centimeters\n";
+            cout << "2. Centimeters to Inches\n";
+            cout << "3. Centimeters to Foot\n";
+            cout << "4. Foot to Centimeters\n";
+            cout << "5. Yard to Centimeters\n";
+            cout << "6. Centimeters to Yard\n";
+            cout << "Enter your choice: ";
+            cin >> lengthChoice;
+
+            cout << "Enter value: ";
+            cin >> value;
+
+            if (lengthChoice >= 1 && lengthChoice <= 6) {
+                CGS::convert_cm<double> length(value);
+                switch (lengthChoice) {
+                    case 1:
+                        cout << value << " inches in centimeters: " << length.inch_to_cm() << endl;
+                        break;
+                    case 2:
+                        cout << value << " centimeters in inches: " << length.cm_to_inch() << endl;
+                        break;
+                    case 3:
+                        cout << value << " centimeters in foot: " << length.cm_to_foot() << endl;
+                        break;
+                    case 4:
+                        cout << value << " foot in centimeters: " << length.foot_to_cm() << endl;
+                        break;
+                    case 5:
+                        cout << value << " yard in centimeters: " << length.yard_to_cm() << endl;
+                        break;
+                    case 6:
+                        cout << value << " centimeters in yard: " << length.cm_to_yard() << endl;
+                        break;
+                }
+            } else {
+                cout << "Invalid choice!" << endl;
+            }
+            break;
+        }
 
 
 //SI SYSTEM
