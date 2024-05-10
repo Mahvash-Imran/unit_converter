@@ -159,6 +159,80 @@ int main() {
             }
             break;
         }
+            case 3: {
+            int timeChoice;
+            cout << "Choose time conversion:\n";
+            cout << "1. Minutes to Seconds\n";
+            cout << "2. Seconds to Minutes\n";
+            cout << "3. Hours to Seconds\n";
+            cout << "4. Seconds to Hours\n";
+            cout << "5. Days to Seconds\n";
+            cout << "6. Seconds to Days\n";
+            cout << "7. Weeks to Seconds\n";
+            cout << "8. Seconds to Weeks\n";
+            cout << "9. Months to Seconds\n";
+            cout << "10. Seconds to Months\n";
+            cout << "11. Years to Seconds\n";
+            cout << "12. Seconds to Years\n";
+            cout << "Enter your choice: ";
+            cin >> timeChoice;
+
+            cout << "Enter value: ";
+            cin >> value;
+
+            if (timeChoice >= 1 && timeChoice <= 12) {
+                CGS::convert_time<double> time(value);
+                switch (timeChoice) {
+                    case 1:
+                        cout << value << " minutes in seconds: " << time.min_to_sec() << endl;
+                        break;
+                    case 2:
+                        cout << value << " seconds in minutes: " << time.sec_to_min() << endl;
+                        break;
+                    case 3:
+                        cout << value << " hours in seconds: " << time.hr_to_sec() << endl;
+                        break;
+                    case 4:
+                        cout << value << " seconds in hours: " << time.sec_to_hr() << endl;
+                        break;
+                    case 5:
+                        cout << value << " days in seconds: " << time.day_to_sec() << endl;
+                        break;
+                    case 6:
+                        cout << value << " seconds in days: " << time.sec_to_day() << endl;
+                        break;
+                    case 7:
+                        cout << value << " weeks in seconds: " << time.week_to_sec() << endl;
+                        break;
+                    case 8:
+                        cout << value << " seconds in weeks: " << time.sec_to_week() << endl;
+                        break;
+                    case 9:
+                        cout << value << " months in seconds: " << time.month_to_sec() << endl;
+                        break;
+                    case 10:
+                        cout << value << " seconds in months: " << time.sec_to_month() << endl;
+                        break;
+                    case 11:
+                        cout << value << " years in seconds: " << time.year_to_sec() << endl;
+                        break;
+                    case 12:
+                        cout << value << " seconds in years: " << time.sec_to_year() << endl;
+                        break;
+                }
+            } else {
+                cout << "Invalid choice!" << endl;
+            }
+            break;
+        }
+        default:
+            cout << "Invalid choice!" << endl;
+            break;
+    }
+
+    return 0;
+}
+        
 
 
 //SI SYSTEM
