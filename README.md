@@ -116,6 +116,48 @@ int main() {
                 cout << "Invalid choice!" << endl;
             }
             break;
+        } 
+        case 2: {
+            int massChoice;
+            cout << "Choose mass conversion:\n";
+            cout << "1. Pounds to Grams\n";
+            cout << "2. Grams to Pounds\n";
+            cout << "3. Tons to Grams\n";
+            cout << "4. Grams to Tons\n";
+            cout << "5. Stones to Grams\n";
+            cout << "6. Grams to Stones\n";
+            cout << "Enter your choice: ";
+            cin >> massChoice;
+
+            cout << "Enter value: ";
+            cin >> value;
+
+            if (massChoice >= 1 && massChoice <= 6) {
+                CGS::convert_gram<double> mass(value);
+                switch (massChoice) {          // give the choice to the user
+                    case 1:
+                        cout << value << " pounds in grams: " << mass.pound_to_gram() << endl;
+                        break;
+                    case 2:
+                        cout << value << " grams in pounds: " << mass.gram_to_pound() << endl;
+                        break;
+                    case 3:
+                        cout << value << " tons in grams: " << mass.ton_to_gram() << endl;
+                        break;
+                    case 4:
+                        cout << value << " grams in tons: " << mass.gram_to_ton() << endl;
+                        break;
+                    case 5:
+                        cout << value << " stones in grams: " << mass.stone_to_gram() << endl;
+                        break;
+                    case 6:
+                        cout << value << " grams in stones: " << mass.gram_to_stone() << endl;
+                        break;
+                }
+            } else {
+                cout << "Invalid choice!" << endl;    
+            }
+            break;
         }
 
 
