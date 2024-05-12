@@ -1450,7 +1450,113 @@ int main(){
             }
             
                 }break;
+
+                                case 2:{
+            float v2;
+            string p;
+            cout<<"Enter the value in moles "<<endl;
+            cin>>v2;
+            cout<<"Enter the prefix in which u want the moles to be converted into"<<endl;
+            cin>>p;
+            if (p == "yotta"|| p=="Y") {
+                AmountofSubstance_converter::molToPrefix i;
+                cout << v2 << " " <<" moles"<<  " = " << i.convert(v2, 24) << p << endl;
+            } 
+            else if (p == "zetta"|| p=="Z") {
+                AmountofSubstance_converter::molToPrefix i;
+                cout << v2 << " " <<" moles"<<  " = " << i.convert(v2, 21) << p << endl;
+            }
+            else if (p == "exa"|| p=="E") {
+                AmountofSubstance_converter::molToPrefix i;
+                cout << v2 << " " <<" moles"<<  " = " << i.convert(v2, 18) << p << endl;
+            }
+            else if (p == "peta"|| p=="P") {
+                AmountofSubstance_converter::molToPrefix i;
+                cout << v2 << " " <<" moles"<<  " = " << i.convert(v2, 15) << p << endl;
+            }
+            else if (p == "tera"|| p=="T") {
+                AmountofSubstance_converter::molToPrefix i;
+                cout << v2 << " " <<" moles"<<  " = " << i.convert(v2, 12) << p << endl;
+            }
+            else if (p == "giga"|| p=="G") {
+                AmountofSubstance_converter::molToPrefix i;
+                cout << v2 << " " <<" moles"<< " = " << i.convert(v2, 9) <<  p <<endl;
+            }
+            else if (p == "mega"|| p=="M") {
+                AmountofSubstance_converter::molToPrefix i;
+                cout << v2 << " " <<" moles"<< " = " << i.convert(v2, 6) <<  p <<endl;
+            }
+            else if (p == "kilo"|| p=="k") {
+                AmountofSubstance_converter::molToPrefix i;
+                cout << v2 << " " <<" moles"<< " = " << i.convert(v2, 3) <<  p <<endl;
+            }
+            else if (p == "hecto"|| p=="h") {
+                AmountofSubstance_converter::molToPrefix i;
+                cout << v2 << " " << " moles"<< " = " << i.convert(v2, 2) <<  p <<endl;
+            }
+            else if (p == "deca"|| p=="da") {
+                AmountofSubstance_converter::molToPrefix i;
+                cout << v2 << " " <<" moles"<< " = " << i.convert(v2, 1) <<  p <<endl;
+            }
+            else if (p == "deci"|| p=="d") {
+                AmountofSubstance_converter::molToPrefix i;
+                cout << v2 << " " <<" moles"<<  " = " << i.convert(v2, -1) << p << endl;
+            }
+            else if (p == "centi"|| p=="c") {
+                AmountofSubstance_converter::molToPrefix i;
+                cout << v2 << " " <<" moles"<<  " = " << i.convert(v2, -2) << p << endl;
+            }
+            else if (p == "milli"|| p=="m") {
+                AmountofSubstance_converter::molToPrefix i;
+                cout << v2 << " " <<" moles"<<  " = " << i.convert(v2, -3) << p << endl;
+            }
+            else if (p == "micro"|| p=="u") {
+                AmountofSubstance_converter::molToPrefix i;
+                cout << v2 << " " <<" moles"<<  " = " << i.convert(v2, -6) << p << endl;
+            }
+            else if (p == "nano"|| p=="n") {
+                AmountofSubstance_converter::molToPrefix i;
+                cout << v2 << " " <<" moles"<<  " = " << i.convert(v2, -9) << p << endl;
+            }
+            else if (p == "pico"|| p=="p") {
+                AmountofSubstance_converter::molToPrefix i;
+                cout << v2 << " " << " moles"<< " = " << i.convert(v2, -12) << p << endl;
+            }
+            else if (p == "femto"|| p=="f") {
+                AmountofSubstance_converter::molToPrefix i;
+                cout << v2 << " " << " moles"<< " = " << i.convert(v2, -15) << p << endl;
+            }
+            else if (p == "atto"|| p=="a") {
+                AmountofSubstance_converter::molToPrefix i;
+                cout << v2 << " " << " moles"<< " = " << i.convert(v2, -18) << p << endl;
+            }
+            else if (p == "zepto"|| p=="z") {
+                AmountofSubstance_converter::molToPrefix i;
+                cout << v2 << " " << " moles"<< " = " << i.convert(v2, -21) << p << endl;
+            }
+            else if (p == "yocto"|| p=="y") {
+                AmountofSubstance_converter::molToPrefix i;
+                cout << v2 << " " << " moles"<< " = " << i.convert(v2, -24) << p << endl;
+            }
+            else {
+                cout << "Invalid prefix." << endl;
+            }
+            
+                }break;
+                case 3:{
+                cout<<" Exiting the amount of substance converter "<<endl;
                 
+                }break;
+                default:{
+                    cout<<"Invalid choice. "<<endl;
+                }
+            }
+        
+        
+        }while(choice != 3);
+        }
+        break;
+
 
 //mks system
 #include <iostream>
