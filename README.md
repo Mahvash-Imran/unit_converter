@@ -442,6 +442,331 @@ namespace LuminousIntensity_converter{
     };
 }
 
+int main(){
+    int base_quantity;
+    do{
+    cout<<"***** SI UNIT SYSTEM *****"<<endl;
+    cout<<"Choose the base quantity for unit conversion(eg. 3 for time): "<<endl;
+    cout<<"1. Length"<<endl;
+    cout<<"2. Mass"<<endl;
+    cout<<"3. Time"<<endl;
+    cout<<"4. Temperature"<<endl;
+    cout<<"5. Electric Current"<<endl;
+    cout<<"6. Amount of Substance"<<endl;
+    cout<<"7. Luminous Intensity"<<endl;
+    cout<<"8. Exit the SI system"<<endl;
+    cin>> base_quantity;
+
+    switch(base_quantity){
+        case 1:{
+        int choice;
+        do{
+        cout<<"choose from the following(eg. 1 for conversion of prefix to meters): "<<endl;
+        cout<<"1. convert from prefix to meter"<<endl;
+        cout<<"2. convert from meter to prefix"<<endl;
+        cout<<"3. exit"<<endl;
+        cin>>choice;
+        
+            switch(choice){
+                case 1:{
+            float v;
+            string p;
+            cout<<"Enter only the value(eg. 37) for conversion to meters "<<endl;
+            cin>>v;
+            cout<<"Enter the prefix for the value (tera or T or centi or c)"<<endl;
+            cin>>p;
+            if (p == "yotta"|| p=="Y") {
+                Length_converter::prefixToMeter x;
+                cout << v << " " << p << " = " << x.convert(v, 24) << " meters" << endl;
+            } 
+            else if (p == "zetta"|| p=="Z") {
+                Length_converter::prefixToMeter x;
+                cout << v << " " << p << " = " << x.convert(v, 21) << " meters" << endl;
+            }
+            else if (p == "exa"|| p=="E") {
+                Length_converter::prefixToMeter x;
+                cout << v << " " << p << " = " << x.convert(v, 18) << " meters" << endl;
+            }
+            else if (p == "peta"|| p=="P") {
+                Length_converter::prefixToMeter x;
+                cout << v << " " << p << " = " << x.convert(v, 15) << " meters" << endl;
+            }
+            else if (p == "tera"|| p=="T") {
+                Length_converter::prefixToMeter x;
+                cout << v << " " << p << " = " << x.convert(v, 12) << " meters" << endl;
+            }
+            else if (p == "giga"|| p=="G") {
+                Length_converter::prefixToMeter x;
+                cout << v << " " << p << " = " << x.convert(v, 9) << " meters" << endl;
+            }
+            else if (p == "mega"|| p=="M") {
+                Length_converter::prefixToMeter x;
+                cout << v << " " << p << " = " << x.convert(v, 6) << " meters" << endl;
+            }
+            else if (p == "kilo"|| p=="k") {
+                Length_converter::prefixToMeter x;
+                cout << v << " " << p << " = " << x.convert(v, 3) << " meters" << endl;
+            }
+            else if (p == "hecto"|| p=="h") {
+                Length_converter::prefixToMeter x;
+                cout << v << " " << p << " = " << x.convert(v, 2) << " meters" << endl;
+            }
+            else if (p == "deca"|| p=="da") {
+                Length_converter::prefixToMeter x;
+                cout << v << " " << p << " = " << x.convert(v, 1) << " meters" << endl;
+            }
+            else if (p == "deci"|| p=="d") {
+                Length_converter::prefixToMeter x;
+                cout << v << " " << p << " = " << x.convert(v, -1) << " meters" << endl;
+            }
+            else if (p == "centi"|| p=="c") {
+                Length_converter::prefixToMeter x;
+                cout << v << " " << p << " = " << x.convert(v, -2) << " meters" << endl;
+            }
+            else if (p == "milli"|| p=="m") {
+                Length_converter::prefixToMeter x;
+                cout << v << " " << p << " = " << x.convert(v, -3) << " meters" << endl;
+            }
+            else if (p == "micro"|| p=="u") {
+                Length_converter::prefixToMeter x;
+                cout << v << " " << p << " = " << x.convert(v, -6) << " meters" << endl;
+            }
+            else if (p == "nano"|| p=="n") {
+                Length_converter::prefixToMeter x;
+                cout << v << " " << p << " = " << x.convert(v, -9) << " meters" << endl;
+            }
+            else if (p == "pico"|| p=="p") {
+                Length_converter::prefixToMeter x;
+                cout << v << " " << p << " = " << x.convert(v, -12) << " meters" << endl;
+            }
+            else if (p == "femto"|| p=="f") {
+                Length_converter::prefixToMeter x;
+                cout << v << " " << p << " = " << x.convert(v, -15) << " meters" << endl;
+            }
+            else if (p == "atto"|| p=="a") {
+                Length_converter::prefixToMeter x;
+                cout << v << " " << p << " = " << x.convert(v, -18) << " meters" << endl;
+            }
+            else if (p == "zepto"|| p=="z") {
+                Length_converter::prefixToMeter x;
+                cout << v << " " << p << " = " << x.convert(v, -21) << " meters" << endl;
+            }
+            else if (p == "yocto"|| p=="y") {
+                Length_converter::prefixToMeter x;
+                cout << v << " " << p << " = " << x.convert(v, -24) << " meters" << endl;
+            }
+            else {
+                cout << "Invalid prefix." << endl;
+            }
+            
+                }break;
+                case 2:{
+            float v2;
+            string p;
+            cout<<"Enter the value in meters "<<endl;
+            cin>>v2;
+            cout<<"Enter the prefix in which u want the meters to be converted into"<<endl;
+            cin>>p;
+            if (p == "yotta"|| p=="Y") {
+                Length_converter::MeterToPrefix i;
+                cout << v2 << " " <<" meters"<<  " = " << i.convert(v2, 24) << p << endl;
+            } 
+            else if (p == "zetta"|| p=="Z") {
+                Length_converter::MeterToPrefix i;
+                cout << v2 << " " <<" meters"<<  " = " << i.convert(v2, 21) << p << endl;
+            }
+            else if (p == "exa"|| p=="E") {
+                Length_converter::MeterToPrefix i;
+                cout << v2 << " " <<" meters"<<  " = " << i.convert(v2, 18) << p << endl;
+            }
+            else if (p == "peta"|| p=="P") {
+                Length_converter::MeterToPrefix i;
+                cout << v2 << " " <<" meters"<<  " = " << i.convert(v2, 15) << p << endl;
+            }
+            else if (p == "tera"|| p=="T") {
+                Length_converter::MeterToPrefix i;
+                cout << v2 << " " <<" meters"<<  " = " << i.convert(v2, 12) << p << endl;
+            }
+            else if (p == "giga"|| p=="G") {
+                Length_converter::MeterToPrefix i;
+                cout << v2 << " " <<" meters"<< " = " << i.convert(v2, 9) <<  p <<endl;
+            }
+            else if (p == "mega"|| p=="M") {
+                Length_converter::MeterToPrefix i;
+                cout << v2 << " " <<" meters"<< " = " << i.convert(v2, 6) <<  p <<endl;
+            }
+            else if (p == "kilo"|| p=="k") {
+                Length_converter::MeterToPrefix i;
+                cout << v2 << " " <<" meters"<< " = " << i.convert(v2, 3) <<  p <<endl;
+            }
+            else if (p == "hecto"|| p=="h") {
+                Length_converter::MeterToPrefix i;
+                cout << v2 << " " << " meters"<< " = " << i.convert(v2, 2) <<  p <<endl;
+            }
+            else if (p == "deca"|| p=="da") {
+                Length_converter::MeterToPrefix i;
+                cout << v2 << " " <<" meters"<< " = " << i.convert(v2, 1) <<  p <<endl;
+            }
+            else if (p == "deci"|| p=="d") {
+                Length_converter::MeterToPrefix i;
+                cout << v2 << " " <<" meters"<<  " = " << i.convert(v2, -1) << p << endl;
+            }
+            else if (p == "centi"|| p=="c") {
+                Length_converter::MeterToPrefix i;
+                cout << v2 << " " <<" meters"<<  " = " << i.convert(v2, -2) << p << endl;
+            }
+            else if (p == "milli"|| p=="m") {
+                Length_converter::MeterToPrefix i;
+                cout << v2 << " " <<" meters"<<  " = " << i.convert(v2, -3) << p << endl;
+            }
+            else if (p == "micro"|| p=="u") {
+                Length_converter::MeterToPrefix i;
+                cout << v2 << " " <<" meters"<<  " = " << i.convert(v2, -6) << p << endl;
+            }
+            else if (p == "nano"|| p=="n") {
+                Length_converter::MeterToPrefix i;
+                cout << v2 << " " <<" meters"<<  " = " << i.convert(v2, -9) << p << endl;
+            }
+            else if (p == "pico"|| p=="p") {
+                Length_converter::MeterToPrefix i;
+                cout << v2 << " " << " meters"<< " = " << i.convert(v2, -12) << p << endl;
+            }
+            else if (p == "femto"|| p=="f") {
+                Length_converter::MeterToPrefix i;
+                cout << v2 << " " << " meters"<< " = " << i.convert(v2, -15) << p << endl;
+            }
+            else if (p == "atto"|| p=="a") {
+                Length_converter::MeterToPrefix i;
+                cout << v2 << " " << " meters"<< " = " << i.convert(v2, -18) << p << endl;
+            }
+            else if (p == "zepto"|| p=="z") {
+                Length_converter::MeterToPrefix i;
+                cout << v2 << " " << " meters"<< " = " << i.convert(v2, -21) << p << endl;
+            }
+            else if (p == "yocto"|| p=="y") {
+                Length_converter::MeterToPrefix i;
+                cout << v2 << " " << " meters"<< " = " << i.convert(v2, -24) << p << endl;
+            }
+            else {
+                cout << "Invalid prefix." << endl;
+            }
+            
+                }break;
+                case 3:{
+                cout<<" Exiting the length converter "<<endl;
+                
+                }break;
+                default:{
+                    cout<<"Invalid choice. "<<endl;
+                }
+            }
+        
+        
+        }while(choice != 3);
+        }
+        break;
+
+        case 2:{
+             int choice;
+        do{
+        cout<<"choose from the following(eg. 1 for conversion of prefix to kilograms): "<<endl;
+        cout<<"1. convert from prefix to meter"<<endl;
+        cout<<"2. convert from meter to prefix"<<endl;
+        cout<<"3. exit"<<endl;
+        cin>>choice;
+        
+            switch(choice){
+                case 1:{
+            float v;
+            string p;
+            cout<<"Enter the value(eg. 37) and its prefix(deci or d) for conversion to kilograms "<<endl;
+            cin>>v>>p;
+            if (p == "yotta"|| p=="Y") {
+                Mass_converter::prefixToKilograms  x;
+                cout << v << " " << p << " = " << x.convert(v, 21) << " kilograms" << endl;
+            } 
+            else if (p == "zetta"|| p=="Z") {
+                Mass_converter::prefixToKilograms  x;
+                cout << v << " " << p << " = " << x.convert(v, 18) << " kilograms" << endl;
+            }
+            else if (p == "exa"|| p=="E") {
+                Mass_converter::prefixToKilograms  x;
+                cout << v << " " << p << " = " << x.convert(v, 15) << " kilograms" << endl;
+            }
+            else if (p == "peta"|| p=="P") {
+                Mass_converter::prefixToKilograms  x;
+                cout << v << " " << p << " = " << x.convert(v, 12) << " kilograms" << endl;
+            }
+            else if (p == "tera"|| p=="T") {
+                Mass_converter::prefixToKilograms  x;
+                cout << v << " " << p << " = " << x.convert(v, 9) << " kilograms" << endl;
+            }
+            else if (p == "giga"|| p=="G") {
+                Mass_converter::prefixToKilograms  x;
+                cout << v << " " << p << " = " << x.convert(v, 6) << " kilograms" << endl;
+            }
+            else if (p == "mega"|| p=="M") {
+                Mass_converter::prefixToKilograms  x;
+                cout << v << " " << p << " = " << x.convert(v, 3) << " kilograms" << endl;
+            }
+            else if (p == "kilo"|| p=="k") {
+                Mass_converter::prefixToKilograms  x;
+                cout << v << " " << p << " = " << x.convert(v, 0) << " kilograms" << endl;
+            }
+            else if (p == "hecto"|| p=="h") {
+                Mass_converter::prefixToKilograms  x;
+                cout << v << " " << p << " = " << x.convert(v, -1) << " kilograms" << endl;
+            }
+            else if (p == "deca"|| p=="da") {
+                Mass_converter::prefixToKilograms  x;
+                cout << v << " " << p << " = " << x.convert(v, -2) << " kilograms" << endl;
+            }
+            else if (p == "deci"|| p=="d") {
+                Mass_converter::prefixToKilograms  x;
+                cout << v << " " << p << " = " << x.convert(v, -4) << " kilograms" << endl;
+            }
+            else if (p == "centi"|| p=="c") {
+                Mass_converter::prefixToKilograms  x;
+                cout << v << " " << p << " = " << x.convert(v, -5) << " kilograms" << endl;
+            }
+            else if (p == "milli"|| p=="m") {
+                Mass_converter::prefixToKilograms  x;
+                cout << v << " " << p << " = " << x.convert(v, -6) << " kilograms" << endl;
+            }
+            else if (p == "micro"|| p=="u") {
+                Mass_converter::prefixToKilograms  x;
+                cout << v << " " << p << " = " << x.convert(v, -9) << " kilograms" << endl;
+            }
+            else if (p == "nano"|| p=="n") {
+                Mass_converter::prefixToKilograms  x;
+                cout << v << " " << p << " = " << x.convert(v, -12) << " kilograms" << endl;
+            }
+            else if (p == "pico"|| p=="p") {
+                Mass_converter::prefixToKilograms  x;
+                cout << v << " " << p << " = " << x.convert(v, -15) << " kilograms" << endl;
+            }
+            else if (p == "femto"|| p=="f") {
+                Mass_converter::prefixToKilograms  x;
+                cout << v << " " << p << " = " << x.convert(v, -18) << " kilograms" << endl;
+            }
+            else if (p == "atto"|| p=="a") {
+                Mass_converter::prefixToKilograms  x;
+                cout << v << " " << p << " = " << x.convert(v, -21) << " kilograms" << endl;
+            }
+            else if (p == "zepto"|| p=="z") {
+                Mass_converter::prefixToKilograms  x;
+                cout << v << " " << p << " = " << x.convert(v, -24) << " kilograms" << endl;
+            }
+            else if (p == "yocto"|| p=="y") {
+                Mass_converter::prefixToKilograms  x;
+                cout << v << " " << p << " = " << x.convert(v, -27) << " kilograms" << endl;
+            }
+            else {
+                cout << "Invalid prefix." << endl;
+            }
+            
+                }break;
+                
 
 //mks system
 #include <iostream>
