@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-
+namespace mks{2
 
 class length {
 public:
@@ -18,35 +18,35 @@ public:
     void inchtofeet() {
         cout << "Enter value in inches :" << endl;
         cin >> inches;
-        float p = inches / 12.0; // corrected conversion
+        float p = inches / 12.0;
         cout << inches << " inches is " << p << " feet" << endl;
     }
 
     void inchtoyards() {
         cout << "Enter value in inches:" << endl;
         cin >> inches;
-        float p = inches / 36.0; // corrected conversion
+        float p = inches / 36.0; 
         cout << inches << " inches is " << p << " yards" << endl;
     }
 
     void yardstoinch() {
         cout << "Enter value in yards :" << endl;
         cin >> yards;
-        float p = yards * 36; // corrected conversion
+        float p = yards * 36; 
         cout << yards << " yards is " << p << " inches" << endl;
     }
 
     void yardstofoot() {
         cout << "Enter value in yards :" << endl;
         cin >> yards;
-        float p = yards * 3; // corrected conversion
+        float p = yards * 3; 
         cout << yards << " yards is " << p << " foot" << endl;
     }
 
     void feettoyards() {
         cout << "Enter value in feet :" << endl;
-        cin >> feet;
-        float p = feet / 3.0; // corrected conversion
+        cin >>feet;
+        float p = feet / 3.0;
         cout << feet << " feet is " << p << " yards" << endl;
     }
 };
@@ -172,7 +172,10 @@ void maindisplay(){
     
 
 }
+} 
+using namespace mks;
 int main() {
+
     maindisplay();
     
     timee t1; 
@@ -315,4 +318,3 @@ int main() {
 
     return 0;
 }
-
