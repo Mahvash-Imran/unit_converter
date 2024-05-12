@@ -1065,6 +1065,184 @@ int main(){
             }
             
                 }break;
+                                case 3:{
+                cout<<" Exiting the time converter "<<endl;
+                
+                }break;
+                default:{
+                    cout<<"Invalid choice. "<<endl;
+                }
+            }
+        
+        
+        }while(choice != 3);
+
+        }
+        break;
+
+        case 4:{
+            int choice;
+            do{
+            cout<<" choose the conversion you want from the following (eg. 2 for kelvin to celsius): "<<endl;
+            cout<<"1. celsius to kelvin "<<endl;
+            cout<<"2. kelvin to celsius "<<endl;
+            cout<<"3. fahrenheit to kelvin"<<endl;
+            cout<<"4. kelvin to fahrenheit"<<endl;
+            cout<<"5. celsius to fahrenheit"<<endl;
+            cout<<"6. fahrenheit to celsius"<<endl;
+            cout<<"7. Exit Temperature converter"<<endl;
+            cin>>choice;
+            if (choice==1){
+                double v;
+                cout<<"enter the value"<<endl;
+                cin>>v;
+                Temperature_converter::CelsiusToKelvin c;
+                cout<<v<<" "<<"celsius "<<"= "<<c.convert(v)<<" K"<<endl;
+            }
+            else if(choice==2){
+                double v;
+                cout<<"enter the value"<<endl;
+                cin>>v;
+                Temperature_converter::KelvinToCelsius k;
+                cout<<v<<" "<<"K "<<"= "<<k.convert(v)<<" celsius"<<endl;
+            }
+            else if(choice==3){
+                double v;
+                cout<<"enter the value"<<endl;
+                cin>>v;
+                Temperature_converter::FahrenheitToKelvin f;
+                cout<<v<<" "<<"F "<<"= "<<f.convert(v)<<" K"<<endl;
+            }
+            else if(choice==4){
+                double v;
+                cout<<"enter the value"<<endl;
+                cin>>v;
+                Temperature_converter::KelvinToFahrenheit k;
+                cout<<v<<" "<<"K "<<"= "<<k.convert(v)<<" F"<<endl;
+            }
+            else if(choice==5){
+                double v;
+                cout<<"enter the value"<<endl;
+                cin>>v;
+                Temperature_converter::CelsiusToFahrenheit c;
+                cout<<v<<" "<<"celsius "<<"= "<<c.convert(v)<<" F"<<endl;
+            }
+            else if(choice==6){
+                double v;
+                cout<<"enter the value"<<endl;
+                cin>>v;
+                Temperature_converter::FahrenheitToCelsius f;
+                cout<<v<<" "<<"F "<<"= "<<f.convert(v)<<" celsius"<<endl;
+            }
+            else{
+                cout<<"Invalid choice"<<endl;
+            }
+            }while(choice!=7);
+
+
+        }
+        break;
+        
+        case 5:{
+        int choice;
+        do{
+        cout<<"choose from the following(eg. 1 for conversion of prefix to Amperes ): "<<endl;
+        cout<<"1. convert from prefix to Amperes "<<endl;
+        cout<<"2. convert from Amperes  to prefix"<<endl;
+        cout<<"3. exit"<<endl;
+        cin>>choice;
+        
+            switch(choice){
+                case 1:{
+            float v;
+            string p;
+            cout<<"Enter the value(eg. 37) and its prefix(deci or d) for conversion to Amperes  "<<endl;
+            cin>>v>>p;
+            if (p == "yotta"|| p=="Y") {
+                ElectricCurrent_converter::prefixToAmpere x;
+                cout << v << " " << p << " = " << x.convert(v, 24) << " Amperes " << endl;
+            } 
+            else if (p == "zetta"|| p=="Z") {
+                ElectricCurrent_converter::prefixToAmpere x;
+                cout << v << " " << p << " = " << x.convert(v, 21) << " Amperes " << endl;
+            }
+            else if (p == "exa"|| p=="E") {
+                ElectricCurrent_converter::prefixToAmpere x;
+                cout << v << " " << p << " = " << x.convert(v, 18) << " Amperes " << endl;
+            }
+            else if (p == "peta"|| p=="P") {
+                ElectricCurrent_converter::prefixToAmpere x;
+                cout << v << " " << p << " = " << x.convert(v, 15) << " Amperes " << endl;
+            }
+            else if (p == "tera"|| p=="T") {
+                ElectricCurrent_converter::prefixToAmpere x;
+                cout << v << " " << p << " = " << x.convert(v, 12) << " Amperes " << endl;
+            }
+            else if (p == "giga"|| p=="G") {
+                ElectricCurrent_converter::prefixToAmpere x;
+                cout << v << " " << p << " = " << x.convert(v, 9) << " Amperes " << endl;
+            }
+            else if (p == "mega"|| p=="M") {
+                ElectricCurrent_converter::prefixToAmpere x;
+                cout << v << " " << p << " = " << x.convert(v, 6) << " Amperes " << endl;
+            }
+            else if (p == "kilo"|| p=="k") {
+                ElectricCurrent_converter::prefixToAmpere x;
+                cout << v << " " << p << " = " << x.convert(v, 3) << " Amperes " << endl;
+            }
+            else if (p == "hecto"|| p=="h") {
+                ElectricCurrent_converter::prefixToAmpere x;
+                cout << v << " " << p << " = " << x.convert(v, 2) << " Amperes " << endl;
+            }
+            else if (p == "deca"|| p=="da") {
+                ElectricCurrent_converter::prefixToAmpere x;
+                cout << v << " " << p << " = " << x.convert(v, 1) << " Amperes " << endl;
+            }
+            else if (p == "deci"|| p=="d") {
+                ElectricCurrent_converter::prefixToAmpere x;
+                cout << v << " " << p << " = " << x.convert(v, -1) << " Amperes " << endl;
+            }
+            else if (p == "centi"|| p=="c") {
+                ElectricCurrent_converter::prefixToAmpere x;
+                cout << v << " " << p << " = " << x.convert(v, -2) << " Amperes " << endl;
+            }
+            else if (p == "milli"|| p=="m") {
+                ElectricCurrent_converter::prefixToAmpere x;
+                cout << v << " " << p << " = " << x.convert(v, -3) << " Amperes " << endl;
+            }
+            else if (p == "micro"|| p=="u") {
+                ElectricCurrent_converter::prefixToAmpere x;
+                cout << v << " " << p << " = " << x.convert(v, -6) << " Amperes " << endl;
+            }
+            else if (p == "nano"|| p=="n") {
+                ElectricCurrent_converter::prefixToAmpere x;
+                cout << v << " " << p << " = " << x.convert(v, -9) << " Amperes " << endl;
+            }
+            else if (p == "pico"|| p=="p") {
+                ElectricCurrent_converter::prefixToAmpere x;
+                cout << v << " " << p << " = " << x.convert(v, -12) << " Amperes " << endl;
+            }
+            else if (p == "femto"|| p=="f") {
+                ElectricCurrent_converter::prefixToAmpere x;
+                cout << v << " " << p << " = " << x.convert(v, -15) << " Amperes " << endl;
+            }
+            else if (p == "atto"|| p=="a") {
+                ElectricCurrent_converter::prefixToAmpere x;
+                cout << v << " " << p << " = " << x.convert(v, -18) << " Amperes " << endl;
+            }
+            else if (p == "zepto"|| p=="z") {
+                ElectricCurrent_converter::prefixToAmpere x;
+                cout << v << " " << p << " = " << x.convert(v, -21) << " Amperes " << endl;
+            }
+            else if (p == "yocto"|| p=="y") {
+                ElectricCurrent_converter::prefixToAmpere x;
+                cout << v << " " << p << " = " << x.convert(v, -24) << " Amperes " << endl;
+            }
+            else {
+                cout << "Invalid prefix." << endl;
+            }
+            
+                }break;
                 
 
 //mks system
