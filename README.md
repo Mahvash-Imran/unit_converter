@@ -766,6 +766,305 @@ int main(){
             }
             
                 }break;
+
+         case 2:{
+            float v2;
+            string p;
+            cout<<"Enter the value in kilograms "<<endl;
+            cin>>v2;
+            cout<<"Enter the prefix in which u want the kilograms to be converted into"<<endl;
+            cin>>p;
+            if (p == "yotta"|| p=="Y") {
+                Mass_converter::KilogramsToPrefix i;
+                cout << v2 << " " <<" kilograms"<<  " = " << i.convert(v2, 21) << p << endl;
+            } 
+            else if (p == "zetta"|| p=="Z") {
+                Mass_converter::KilogramsToPrefix i;
+                cout << v2 << " " <<" kilograms"<<  " = " << i.convert(v2, 18) << p << endl;
+            }
+            else if (p == "exa"|| p=="E") {
+                Mass_converter::KilogramsToPrefix i;
+                cout << v2 << " " <<" kilograms"<<  " = " << i.convert(v2, 15) << p << endl;
+            }
+            else if (p == "peta"|| p=="P") {
+                Mass_converter::KilogramsToPrefix i;
+                cout << v2 << " " <<" kilograms"<<  " = " << i.convert(v2, 12) << p << endl;
+            }
+            else if (p == "tera"|| p=="T") {
+                Mass_converter::KilogramsToPrefix i;
+                cout << v2 << " " <<" kilograms"<<  " = " << i.convert(v2, 9) << p << endl;
+            }
+            else if (p == "giga"|| p=="G") {
+                Mass_converter::KilogramsToPrefix i;
+                cout << v2 << " " <<" kilograms"<< " = " << i.convert(v2, 6) <<  p <<endl;
+            }
+            else if (p == "mega"|| p=="M") {
+                Mass_converter::KilogramsToPrefix i;
+                cout << v2 << " " <<" kilograms"<< " = " << i.convert(v2, 3) <<  p <<endl;
+            }
+            else if (p == "kilo"|| p=="k") {
+                Mass_converter::KilogramsToPrefix i;
+                cout << v2 << " " <<" kilograms"<< " = " << i.convert(v2, 0) <<  p <<endl;
+            }
+            else if (p == "hecto"|| p=="h") {
+                Mass_converter::KilogramsToPrefix i;
+                cout << v2 << " " << " kilograms"<< " = " << i.convert(v2, -1) <<  p <<endl;
+            }
+            else if (p == "deca"|| p=="da") {
+                Mass_converter::KilogramsToPrefix i;
+                cout << v2 << " " <<" kilograms"<< " = " << i.convert(v2, -2) <<  p <<endl;
+            }
+            else if (p == "deci"|| p=="d") {
+                Mass_converter::KilogramsToPrefix i;
+                cout << v2 << " " <<" kilograms"<<  " = " << i.convert(v2, -4) << p << endl;
+            }
+            else if (p == "centi"|| p=="c") {
+                Mass_converter::KilogramsToPrefix i;
+                cout << v2 << " " <<" kilograms"<<  " = " << i.convert(v2, -5) << p << endl;
+            }
+            else if (p == "milli"|| p=="m") {
+                Mass_converter::KilogramsToPrefix i;
+                cout << v2 << " " <<" kilograms"<<  " = " << i.convert(v2, -6) << p << endl;
+            }
+            else if (p == "micro"|| p=="u") {
+                Mass_converter::KilogramsToPrefix i;
+                cout << v2 << " " <<" kilograms"<<  " = " << i.convert(v2, -9) << p << endl;
+            }
+            else if (p == "nano"|| p=="n") {
+                Mass_converter::KilogramsToPrefix i;
+                cout << v2 << " " <<" kilograms"<<  " = " << i.convert(v2, -12) << p << endl;
+            }
+            else if (p == "pico"|| p=="p") {
+                Mass_converter::KilogramsToPrefix i;
+                cout << v2 << " " << " kilograms"<< " = " << i.convert(v2, -15) << p << endl;
+            }
+            else if (p == "femto"|| p=="f") {
+                Mass_converter::KilogramsToPrefix i;
+                cout << v2 << " " << " kilograms"<< " = " << i.convert(v2, -18) << p << endl;
+            }
+            else if (p == "atto"|| p=="a") {
+                Mass_converter::KilogramsToPrefix i;
+                cout << v2 << " " << " kilograms"<< " = " << i.convert(v2, -21) << p << endl;
+            }
+            else if (p == "zepto"|| p=="z") {
+                Mass_converter::KilogramsToPrefix i;
+                cout << v2 << " " << " kilograms"<< " = " << i.convert(v2, -24) << p << endl;
+            }
+            else if (p == "yocto"|| p=="y") {
+                Mass_converter::KilogramsToPrefix i;
+                cout << v2 << " " << " kilograms"<< " = " << i.convert(v2, -27) << p << endl;
+            }
+            else {
+                cout << "Invalid prefix." << endl;
+            }
+            
+                }break;
+                case 3:{
+                cout<<" Exiting the Mass converter "<<endl;
+                
+                }break;
+                default:{
+                    cout<<"Invalid choice. "<<endl;
+                }
+            }
+        
+        
+        }while(choice != 3);
+        }
+        break;
+
+        case 3:{
+            int choice;
+        do{
+        cout<<"choose from the following(eg. 1 for conversion of prefix to seconds): "<<endl;
+        cout<<"1. convert from prefix to seconds"<<endl;
+        cout<<"2. convert from seconds to prefix"<<endl;
+        cout<<"3. exit"<<endl;
+        cin>>choice;
+        
+            switch(choice){
+                case 1:{
+            float v;
+            string p;
+            cout<<"Enter the value(eg. 37) and its prefix(deci or d) for conversion to seconds "<<endl;
+            cin>>v>>p;
+            if (p == "yotta"|| p=="Y") {
+                Time_converter::prefixTosecond x;
+                cout << v << " " << p << " = " << x.convert(v, 24) << " seconds" << endl;
+            } 
+            else if (p == "zetta"|| p=="Z") {
+                Time_converter::prefixTosecond x;
+                cout << v << " " << p << " = " << x.convert(v, 21) << " seconds" << endl;
+            }
+            else if (p == "exa"|| p=="E") {
+                Time_converter::prefixTosecond x;
+                cout << v << " " << p << " = " << x.convert(v, 18) << " seconds" << endl;
+            }
+            else if (p == "peta"|| p=="P") {
+                Time_converter::prefixTosecond x;
+                cout << v << " " << p << " = " << x.convert(v, 15) << " seconds" << endl;
+            }
+            else if (p == "tera"|| p=="T") {
+                Time_converter::prefixTosecond x;
+                cout << v << " " << p << " = " << x.convert(v, 12) << " seconds" << endl;
+            }
+            else if (p == "giga"|| p=="G") {
+                Time_converter::prefixTosecond x;
+                cout << v << " " << p << " = " << x.convert(v, 9) << " seconds" << endl;
+            }
+            else if (p == "mega"|| p=="M") {
+                Time_converter::prefixTosecond x;
+                cout << v << " " << p << " = " << x.convert(v, 6) << " seconds" << endl;
+            }
+            else if (p == "kilo"|| p=="k") {
+                Time_converter::prefixTosecond x;
+                cout << v << " " << p << " = " << x.convert(v, 3) << " seconds" << endl;
+            }
+            else if (p == "hecto"|| p=="h") {
+                Time_converter::prefixTosecond x;
+                cout << v << " " << p << " = " << x.convert(v, 2) << " seconds" << endl;
+            }
+            else if (p == "deca"|| p=="da") {
+                Time_converter::prefixTosecond x;
+                cout << v << " " << p << " = " << x.convert(v, 1) << " seconds" << endl;
+            }
+            else if (p == "deci"|| p=="d") {
+                Time_converter::prefixTosecond x;
+                cout << v << " " << p << " = " << x.convert(v, -1) << " seconds" << endl;
+            }
+            else if (p == "centi"|| p=="c") {
+                Time_converter::prefixTosecond x;
+                cout << v << " " << p << " = " << x.convert(v, -2) << " seconds" << endl;
+            }
+            else if (p == "milli"|| p=="m") {
+                Time_converter::prefixTosecond x;
+                cout << v << " " << p << " = " << x.convert(v, -3) << " seconds" << endl;
+            }
+            else if (p == "micro"|| p=="u") {
+                Time_converter::prefixTosecond x;
+                cout << v << " " << p << " = " << x.convert(v, -6) << " seconds" << endl;
+            }
+            else if (p == "nano"|| p=="n") {
+                Time_converter::prefixTosecond x;
+                cout << v << " " << p << " = " << x.convert(v, -9) << " seconds" << endl;
+            }
+            else if (p == "pico"|| p=="p") {
+                Time_converter::prefixTosecond x;
+                cout << v << " " << p << " = " << x.convert(v, -12) << " seconds" << endl;
+            }
+            else if (p == "femto"|| p=="f") {
+                Time_converter::prefixTosecond x;
+                cout << v << " " << p << " = " << x.convert(v, -15) << " seconds" << endl;
+            }
+            else if (p == "atto"|| p=="a") {
+                Time_converter::prefixTosecond x;
+                cout << v << " " << p << " = " << x.convert(v, -18) << " seconds" << endl;
+            }
+            else if (p == "zepto"|| p=="z") {
+                Time_converter::prefixTosecond x;
+                cout << v << " " << p << " = " << x.convert(v, -21) << " seconds" << endl;
+            }
+            else if (p == "yocto"|| p=="y") {
+                Time_converter::prefixTosecond x;
+                cout << v << " " << p << " = " << x.convert(v, -24) << " seconds" << endl;
+            }
+            else {
+                cout << "Invalid prefix." << endl;
+            }
+            
+                }break;
+                case 2:{
+            float v2;
+            string p;
+            cout<<"Enter the value in seconds "<<endl;
+            cin>>v2;
+            cout<<"Enter the prefix in which u want the seconds to be converted into"<<endl;
+            cin>>p;
+            if (p == "yotta"|| p=="Y") {
+                Time_converter::secondToPrefix i;
+                cout << v2 << " " <<" seconds "<<  " = " << i.convert(v2, 24) << p << endl;
+            } 
+            else if (p == "zetta"|| p=="Z") {
+                Time_converter::secondToPrefix i;
+                cout << v2 << " " <<" seconds "<<  " = " << i.convert(v2, 21) << p << endl;
+            }
+            else if (p == "exa"|| p=="E") {
+                Time_converter::secondToPrefix i;
+                cout << v2 << " " <<" seconds "<<  " = " << i.convert(v2, 18) << p << endl;
+            }
+            else if (p == "peta"|| p=="P") {
+                Time_converter::secondToPrefix i;
+                cout << v2 << " " <<" seconds "<<  " = " << i.convert(v2, 15) << p << endl;
+            }
+            else if (p == "tera"|| p=="T") {
+                Time_converter::secondToPrefix i;
+                cout << v2 << " " <<" seconds "<<  " = " << i.convert(v2, 12) << p << endl;
+            }
+            else if (p == "giga"|| p=="G") {
+                Time_converter::secondToPrefix i;
+                cout << v2 << " " <<" seconds "<< " = " << i.convert(v2, 9) <<  p <<endl;
+            }
+            else if (p == "mega"|| p=="M") {
+                Time_converter::secondToPrefix i;
+                cout << v2 << " " <<" seconds "<< " = " << i.convert(v2, 6) <<  p <<endl;
+            }
+            else if (p == "kilo"|| p=="k") {
+                Time_converter::secondToPrefix i;
+                cout << v2 << " " <<" seconds "<< " = " << i.convert(v2, 3) <<  p <<endl;
+            }
+            else if (p == "hecto"|| p=="h") {
+                Time_converter::secondToPrefix i;
+                cout << v2 << " " << " seconds "<< " = " << i.convert(v2, 2) <<  p <<endl;
+            }
+            else if (p == "deca"|| p=="da") {
+                Time_converter::secondToPrefix i;
+                cout << v2 << " " <<" seconds "<< " = " << i.convert(v2, 1) <<  p <<endl;
+            }
+            else if (p == "deci"|| p=="d") {
+                Time_converter::secondToPrefix i;
+                cout << v2 << " " <<" seconds "<<  " = " << i.convert(v2, -1) << p << endl;
+            }
+            else if (p == "centi"|| p=="c") {
+                Time_converter::secondToPrefix i;
+                cout << v2 << " " <<" seconds "<<  " = " << i.convert(v2, -2) << p << endl;
+            }
+            else if (p == "milli"|| p=="m") {
+                Time_converter::secondToPrefix i;
+                cout << v2 << " " <<" seconds "<<  " = " << i.convert(v2, -3) << p << endl;
+            }
+            else if (p == "micro"|| p=="u") {
+                Time_converter::secondToPrefix i;
+                cout << v2 << " " <<" seconds "<<  " = " << i.convert(v2, -6) << p << endl;
+            }
+            else if (p == "nano"|| p=="n") {
+                Time_converter::secondToPrefix i;
+                cout << v2 << " " <<" seconds "<<  " = " << i.convert(v2, -9) << p << endl;
+            }
+            else if (p == "pico"|| p=="p") {
+                Time_converter::secondToPrefix i;
+                cout << v2 << " " << " seconds "<< " = " << i.convert(v2, -12) << p << endl;
+            }
+            else if (p == "femto"|| p=="f") {
+                Time_converter::secondToPrefix i;
+                cout << v2 << " " << " seconds "<< " = " << i.convert(v2, -15) << p << endl;
+            }
+            else if (p == "atto"|| p=="a") {
+                Time_converter::secondToPrefix i;
+                cout << v2 << " " << " seconds "<< " = " << i.convert(v2, -18) << p << endl;
+            }
+            else if (p == "zepto"|| p=="z") {
+                Time_converter::secondToPrefix i;
+                cout << v2 << " " << " seconds "<< " = " << i.convert(v2, -21) << p << endl;
+            }
+            else if (p == "yocto"|| p=="y") {
+                Time_converter::secondToPrefix i;
+                cout << v2 << " " << " seconds "<< " = " << i.convert(v2, -24) << p << endl;
+            }
+            else {
+                cout << "Invalid prefix." << endl;
+            }
+            
+                }break;
                 
 
 //mks system
