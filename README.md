@@ -1598,7 +1598,7 @@ int main(){
         case 8:
         {
             cout<<" Exiting the SI unit system. "<<endl;
-        }
+        }break;
         default:
         cout<<"Wrong choice entered."<<endl;
 
