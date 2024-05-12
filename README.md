@@ -1243,6 +1243,112 @@ int main(){
             }
             
                 }break;
+
+                                case 2:{
+            float v2;
+            string p;
+            cout<<"Enter the value in Amperes "<<endl;
+            cin>>v2;
+            cout<<"Enter the prefix in which u want the Amperes to be converted into"<<endl;
+            cin>>p;
+            if (p == "yotta"|| p=="Y") {
+                Length_converter::MeterToPrefix i;
+                cout << v2 << " " <<" Amperes"<<  " = " << i.convert(v2, 24) << p << endl;
+            } 
+            else if (p == "zetta"|| p=="Z") {
+                Length_converter::MeterToPrefix i;
+                cout << v2 << " " <<" Amperes"<<  " = " << i.convert(v2, 21) << p << endl;
+            }
+            else if (p == "exa"|| p=="E") {
+                Length_converter::MeterToPrefix i;
+                cout << v2 << " " <<" Amperes"<<  " = " << i.convert(v2, 18) << p << endl;
+            }
+            else if (p == "peta"|| p=="P") {
+                Length_converter::MeterToPrefix i;
+                cout << v2 << " " <<" Amperes"<<  " = " << i.convert(v2, 15) << p << endl;
+            }
+            else if (p == "tera"|| p=="T") {
+                Length_converter::MeterToPrefix i;
+                cout << v2 << " " <<" Amperes"<<  " = " << i.convert(v2, 12) << p << endl;
+            }
+            else if (p == "giga"|| p=="G") {
+                Length_converter::MeterToPrefix i;
+                cout << v2 << " " <<" Amperes"<< " = " << i.convert(v2, 9) <<  p <<endl;
+            }
+            else if (p == "mega"|| p=="M") {
+                Length_converter::MeterToPrefix i;
+                cout << v2 << " " <<" Amperes"<< " = " << i.convert(v2, 6) <<  p <<endl;
+            }
+            else if (p == "kilo"|| p=="k") {
+                Length_converter::MeterToPrefix i;
+                cout << v2 << " " <<" Amperes"<< " = " << i.convert(v2, 3) <<  p <<endl;
+            }
+            else if (p == "hecto"|| p=="h") {
+                Length_converter::MeterToPrefix i;
+                cout << v2 << " " << " Amperes"<< " = " << i.convert(v2, 2) <<  p <<endl;
+            }
+            else if (p == "deca"|| p=="da") {
+                Length_converter::MeterToPrefix i;
+                cout << v2 << " " <<" Amperes"<< " = " << i.convert(v2, 1) <<  p <<endl;
+            }
+            else if (p == "deci"|| p=="d") {
+                Length_converter::MeterToPrefix i;
+                cout << v2 << " " <<" Amperes"<<  " = " << i.convert(v2, -1) << p << endl;
+            }
+            else if (p == "centi"|| p=="c") {
+                Length_converter::MeterToPrefix i;
+                cout << v2 << " " <<" Amperes"<<  " = " << i.convert(v2, -2) << p << endl;
+            }
+            else if (p == "milli"|| p=="m") {
+                Length_converter::MeterToPrefix i;
+                cout << v2 << " " <<" Amperes"<<  " = " << i.convert(v2, -3) << p << endl;
+            }
+            else if (p == "micro"|| p=="u") {
+                Length_converter::MeterToPrefix i;
+                cout << v2 << " " <<" Amperes"<<  " = " << i.convert(v2, -6) << p << endl;
+            }
+            else if (p == "nano"|| p=="n") {
+                Length_converter::MeterToPrefix i;
+                cout << v2 << " " <<" Amperes"<<  " = " << i.convert(v2, -9) << p << endl;
+            }
+            else if (p == "pico"|| p=="p") {
+                Length_converter::MeterToPrefix i;
+                cout << v2 << " " << " Amperes"<< " = " << i.convert(v2, -12) << p << endl;
+            }
+            else if (p == "femto"|| p=="f") {
+                Length_converter::MeterToPrefix i;
+                cout << v2 << " " << " Amperes"<< " = " << i.convert(v2, -15) << p << endl;
+            }
+            else if (p == "atto"|| p=="a") {
+                Length_converter::MeterToPrefix i;
+                cout << v2 << " " << " Amperes"<< " = " << i.convert(v2, -18) << p << endl;
+            }
+            else if (p == "zepto"|| p=="z") {
+                Length_converter::MeterToPrefix i;
+                cout << v2 << " " << " Amperes"<< " = " << i.convert(v2, -21) << p << endl;
+            }
+            else if (p == "yocto"|| p=="y") {
+                Length_converter::MeterToPrefix i;
+                cout << v2 << " " << " Amperes"<< " = " << i.convert(v2, -24) << p << endl;
+            }
+            else {
+                cout << "Invalid prefix." << endl;
+            }
+            
+                }break;
+                case 3:{
+                cout<<" Exiting the electric current converter "<<endl;
+                
+                }break;
+                default:{
+                    cout<<"Invalid choice. "<<endl;
+                }
+            }
+        
+        
+        }while(choice != 3);
+        }
+        break;
                 
 
 //mks system
