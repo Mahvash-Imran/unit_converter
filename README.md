@@ -1557,6 +1557,58 @@ int main(){
         }
         break;
 
+                case 7:{
+            int choice;
+            do{
+            cout<<" choose from the following: "<<endl;
+            cout<<"1. Lumen to Candela"<<endl;
+            cout<<"2. Candela to Lumen"<<endl;
+            cout<<"3. Exit"<<endl;
+            cin>>choice;
+
+            if(choice==1){
+                double v;
+                int a;
+                cout<<"enter the value in Lumen"<<endl;
+                cin>>v;
+                cout<<"enter the angle "<<endl;
+                cin>>a;
+                LuminousIntensity_converter::LumenToCandela l;
+                cout<<v<<" "<<" lumen "<<"= "<<l.convert(v,a)<<" Cd"<<endl;
+            }
+            else if(choice==2){
+                double v;
+                int a;
+                cout<<"enter the value in candela(Cd)"<<endl;
+                cin>>v;
+                cout<<"enter the angle "<<endl;
+                cin>>a;
+                LuminousIntensity_converter::CandelaToLumen c;
+                cout<<v<<" "<<"Cd "<<"= "<<c.convert(v,a)<<" lumen"<<endl;
+
+            }
+            else{
+                cout<<" Invalid choice. "<<endl;
+
+            }
+        }while(choice!=3);
+        }
+        break;
+        
+        case 8:
+        {
+            cout<<" Exiting the SI unit system. "<<endl;
+        }
+        default:
+        cout<<"Wrong choice entered."<<endl;
+
+        
+    }
+    }while(base_quantity != 8);
+
+    return 0;
+} 
+
 
 //mks system
 #include <iostream>
