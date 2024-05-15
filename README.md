@@ -387,7 +387,7 @@ void maindisplay(){
 }
 } 
 
-
+ // CGS system of unit conversion//
 namespace CGS {
     template <class T>
     class convert_cm {
@@ -605,6 +605,7 @@ int main() {
             break;
 
         }
+        // this case is for CGS SYSTEM //
 
         case 2: {
 
