@@ -779,7 +779,18 @@ int main() {
 
             /////SI SYSTEM
 
- int base_quantity; do{ cout<<"***** SI UNIT SYSTEM *****"<<endl; cout<<"Choose the base quantity for unit conversion(eg. 3 for time): "<<endl; cout<<"1. Length"<<endl; cout<<"2. Mass"<<endl; cout<<"3. Time"<<endl; cout<<"4. Temperature"<<endl; cout<<"5. Electric Current"<<endl; cout<<"6. Amount of Substance"<<endl; cout<<"7. Luminous Intensity"<<endl; cout<<"8. Exit the SI system"<<endl; cin>> base_quantity;
+ int base_quantity; 
+ do{ cout<<"***** SI UNIT SYSTEM *****"<<endl; 
+ cout<<"Choose the base quantity for unit conversion(eg. 3 for time): "<<endl; 
+ cout<<"1. Length"<<endl; 
+ cout<<"2. Mass"<<endl; 
+ cout<<"3. Time"<<endl; 
+ cout<<"4. Temperature"<<endl;
+ cout<<"5. Electric Current"<<endl;
+ cout<<"6. Amount of Substance"<<endl; 
+ cout<<"7. Luminous Intensity"<<endl; 
+ cout<<"8. Exit the SI system"<<endl;
+ cin>> base_quantity;
 
 switch(base_quantity){
     case 1:{
